@@ -18,7 +18,7 @@ public class WorkerThreadWithJoin extends Thread {
 		System.out.println(workerThread.getState());
 		System.out.println("Line 1 (" + Thread.currentThread().getName() + ")");
 		try {
-			workerThread.join();
+			workerThread.join(); // main thread wacht op workerThread door join
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

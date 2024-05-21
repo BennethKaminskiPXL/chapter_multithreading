@@ -22,6 +22,7 @@ public class AddNumbers extends Thread {
 	}
 
 	public static void main(String[] args) {
+		// colllecctions.synchronizedList zorgt ervoor dat de lijst thread safe is
 		List<Integer> values = Collections.synchronizedList(new ArrayList<>());
 		AddNumbers t1 = new AddNumbers(1000, values);
 		AddNumbers t2 = new AddNumbers(10000, values);

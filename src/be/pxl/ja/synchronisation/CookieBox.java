@@ -8,7 +8,7 @@ public class CookieBox {
 		this.numberOfCookies = numberOfCookies;
 	}
 
-	public synchronized boolean takeCookie() {
+	public synchronized boolean takeCookie() { // synchronized method zodat het stukje code alleen toegekend wordt aan 1 thread
 			if (numberOfCookies > 0) {
 				numberOfCookies--;
 				return true;

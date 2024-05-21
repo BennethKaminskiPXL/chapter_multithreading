@@ -3,6 +3,7 @@ package be.pxl.ja.demo1;
 public class WorkerThread3 {
 
 	public static void main(String[] args) {
+		//met lambda expressie run methode van Runnable interface starten met new thread
 		new Thread(() -> {
 			System.out.println("Line A (" + Thread.currentThread().getName() + ")");
 			System.out.println("Line B (" + Thread.currentThread().getName() + ")");

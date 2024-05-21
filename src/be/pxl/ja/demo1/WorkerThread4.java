@@ -13,11 +13,11 @@ public class WorkerThread4 {
 		System.out.println("Line 1 (" + Thread.currentThread().getName() + ")");
 		System.out.println("Line 2 (" + Thread.currentThread().getName() + ")");
 		System.out.println("Line 3 (" + Thread.currentThread().getName() + ")");
-
-//        try {
-//            virtualThread.join(); // wait for the virtual thread to end
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+		//deze moet er dan bij : anders stopt de main thread en stopt de virtual thread
+        try {
+            virtualThread.join(); // wait for the virtual thread to end, anders wordt de main thread afgesloten en stopt de virtual thread
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

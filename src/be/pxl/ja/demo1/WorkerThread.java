@@ -14,6 +14,7 @@ public class WorkerThread extends Thread {
 	public static void main(String[] args) {
 		WorkerThread workerThread = new WorkerThread();
 		workerThread.start();
+		// workerThread.run(); Dan wordt het door maar 1 thread uitgevoerd, start() zorgt voor een nieuwe thread
 		System.out.println("Line 1 (" + Thread.currentThread().getName() + ")");
 		System.out.println("Line 2 (" + Thread.currentThread().getName() + ")");
 		System.out.println("Line 3 (" + Thread.currentThread().getName() + ")");

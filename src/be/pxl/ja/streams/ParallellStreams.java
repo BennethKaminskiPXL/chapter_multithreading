@@ -24,6 +24,7 @@ public class ParallellStreams {
 		System.out.println("Sequential Stream Time Taken?= " + (t2 - t1) + "\n");
 		t1 = System.currentTimeMillis();
 
+		// veel data in de stream kan soms parallelStream sneller zijn
 		System.out.println("Parallel Stream Count?= " +
 				employees.parallelStream().filter(e -> e.getSalary() >= 15000).count());
 

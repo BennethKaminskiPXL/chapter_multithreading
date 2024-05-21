@@ -18,7 +18,7 @@ public class EatingCookies {
         }
         for (Child child : children) {
             try {
-                child.join();
+                child.join(); // wait for child to finish
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
